@@ -1,8 +1,18 @@
-angular.module('app').controller('listsCtrl', function (listFactory) {
-    this.lists = listFactory.getLists();
+app.controller('listsCtrl', function (listFactory, $rootScope) {
 
-    this.addList = function () {
-        listFactory.addList(this.listName);
-        this.listName = '';
-    }
+	if(typeof $rootScope.currentBoardId == "undefined")
+		$rootScope.currentBoardId = 1;
+
+	this.lists = listFactory.getLists($rootScope.currentBoardId);
+
+	this.addList = function () {
+		listFactory.addList($rootScope.currentBoardId, this.listName);
+		this.lists = listFactory.getLists($rootScope.currentBoardId);
+		this.listName = '';
+	}
+
+	this.removeList = function (list) {
+		listFactory.removeList(list);
+		this.lists = listFactory.getLists($rootScope.currentBoardId);
+	}
 })

@@ -1,29 +1,48 @@
-angular.module('app').factory('listFactory', function () {
+app.factory('listFactory', function () {
     var service =  {};
 
     var lists = [
         {
             id: 1,
-            listName: 'Todo'
+            listName: 'Todo',
+            board_id: 1
         },
         {
             id: 2,
-            listName: 'Doing'
+            listName: 'Doing',
+            board_id: 1
         },
         {
             id: 3,
-            listName: 'Done'
+            listName: 'Done',
+            board_id: 1
+        },
+        {
+            id: 4,
+            listName: 'Todo',
+            board_id: 2
+        },
+        {
+            id: 5,
+            listName: 'Doing',
+            board_id: 2
+        },
+        {
+            id: 6,
+            listName: 'Done',
+            board_id: 2
         }
     ];
 
-    service.getLists = function () {
-        return lists;
+    service.getLists = function (board_id) {
+        return _.filter(lists, { board_id: board_id });
     };
 
-    service.addList = function (listName) {
+    service.addList = function (board, listName) {
         lists.push({
             id: _.uniqueId('list_'),
-            listName: listName
+            listName: listName,
+            board_id: board.id
         });
     };
     

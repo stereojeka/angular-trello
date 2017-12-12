@@ -1,0 +1,13 @@
+<section id="boards-container" class="boards-container" ng-controller="boardsCtrl as boardsCtrl">
+  <div class="row">
+    <section class="board" ng-repeat="board in boardsCtrl.boards" ng-click="boardsCtrl.chooseBoard(board)">
+      <span class="title">{{ board.boardName }}</span>  
+    </section>
+
+    <section class="board add-board">
+      <form ng-submit="boardsCtrl.addBoard()">
+        <input type="text" ng-model="boardsCtrl.boardName" placeholder="Create a new board..." />
+      </form>
+    </section>
+  </div>
+</section>

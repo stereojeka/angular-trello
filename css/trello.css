@@ -12,6 +12,30 @@ header{
     overflow: hidden;
 }
 
+nav a {
+    float: right;
+    color: #fff;
+}
+
+a.btn {
+    background-color: #4590bc;
+    width: 100px;
+    margin: 10px;
+}
+
+a.btn:hover, a.btn:focus  {
+    color: #fff;
+}
+
+.btn {
+    line-height: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 3px;
+    display: block;
+    padding: 8px;
+}
+
 input{
   border-radius: 4px;
 }
@@ -26,6 +50,37 @@ input{
     margin: 0;
     padding: 0;
     text-indent: .5em;
+    margin-top: 7px;
+}
+
+a.app-name:hover, a.app-name:focus {
+    color: #fff;
+}
+
+.board {
+    background-color: #0079bf;
+    height: 72px;
+    width: 280px;
+    color: #fff;
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+    padding: 9pt 8px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.add-board {
+    background-color: #e2e4e6;
+    color: #8c8c8c;
+}
+
+.title {
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 12pt;
+    color: #fff;
 }
 
 .list{
@@ -36,6 +91,7 @@ input{
     border: 1px solid #999;
     vertical-align: top;
     position: relative;
+    margin: 5px;
 }
 
 .list h1{
@@ -55,7 +111,7 @@ input{
     display: inline-block;
 }
 
-.lists-container{
+.lists-container, .boards-container {
   padding: 20px;
   position: relative;
 }

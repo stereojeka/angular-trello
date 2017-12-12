@@ -1,4 +1,4 @@
-angular.module('app').factory('cardFactory', function () {
+app.factory('cardFactory', function () {
     var service = {};
 
     var cards = [
