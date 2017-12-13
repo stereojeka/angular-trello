@@ -4,15 +4,15 @@ app.factory('boardFactory', function () {
     var boards = [
         {
             id: 1,
-            boardName: 'Project 1'
+            boardName: 'Project Board 1'
         },
         {
             id: 2,
-            boardName: 'Project 2'
+            boardName: 'Project Board 2'
         },
         {
             id: 3,
-            boardName: 'Project 3'
+            boardName: 'Project Board 3'
         }
     ];
 
