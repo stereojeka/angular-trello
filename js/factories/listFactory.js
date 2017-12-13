@@ -38,11 +38,11 @@ app.factory('listFactory', function () {
         return _.filter(lists, { board_id: board_id });
     };
 
-    service.addList = function (board, listName) {
+    service.addList = function (board_id, listName) {
         lists.push({
             id: _.uniqueId('list_'),
             listName: listName,
-            board_id: board.id
+            board_id: board_id
         });
     };
     

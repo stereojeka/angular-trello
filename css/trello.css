@@ -138,6 +138,16 @@ a.app-name:hover, a.app-name:focus {
   color: #205c7e;
 }
 
+.remove-board{
+  position : relative;
+  float: right;
+  font-family: Helvetica, Arial, Sans-Serif;
+  top: 0;
+  right: 0;
+  font-weight: 700;
+  color: #fff;
+}
+
 .remove-card{
     position: absolute;
     top: 3px;

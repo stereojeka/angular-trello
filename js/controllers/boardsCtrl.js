@@ -1,6 +1,10 @@
 app.controller('boardsCtrl', function (boardFactory, $rootScope, $location) {
     this.boards = boardFactory.getBoards();
 
+    this.removeBoard = function (board) {
+        boardFactory.removeBoard(board);
+    }
+
     this.addBoard = function () {
         boardFactory.addBoard(this.boardName);
         this.boardName = '';

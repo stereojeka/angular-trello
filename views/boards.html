@@ -1,7 +1,10 @@
 <section id="boards-container" class="boards-container" ng-controller="boardsCtrl as boardsCtrl">
   <div class="row">
     <section class="board" ng-repeat="board in boardsCtrl.boards" ng-click="boardsCtrl.chooseBoard(board)">
-      <span class="title">{{ board.boardName }}</span>  
+      <span class="title">{{ board.boardName }}</span>
+      <a ng-click="boardsCtrl.removeBoard(board)" class="hand">
+        <div class="remove remove-board"></div>
+      </a>  
     </section>
 
     <section class="board add-board">
